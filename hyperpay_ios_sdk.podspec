@@ -10,10 +10,10 @@ Pod::Spec.new do |s|
     s.homepage         = 'https://pub.dev'
     s.license          = { :file => 'LICENSE' }
     s.author           = { 'Abdulrahman Waleed' => 'a.waleed0011@gmail.com' }
-    s.source           = { :git => 'https://github.com/Awaleed/hyperpay_ios_sdk.git', :tag => s.version.to_s }
-  
-    s.preserve_paths = 'OPPWAMobile.xcframework', 'ipworks3ds_sdk.xcframework'
+    s.source           = { :path => '.' }
+
+    s.preserve_paths = 'OPPWAMobile.xcframework', 'ipworks3ds_sdk.xcframework', 'ipworks3ds_sdk_deploy.xcframework'
     s.xcconfig = { 'OTHER_LDFLAGS' => '-framework OPPWAMobile -framework ipworks3ds_sdk ' }
-    s.vendored_frameworks = 'OPPWAMobile.xcframework', 'ipworks3ds_sdk.xcframework'
+    s.vendored_frameworks = 'OPPWAMobile.xcframework', 'ipworks3ds_sdk.xcframework', 'ipworks3ds_sdk_deploy.xcframework'
     s.static_framework = true     
   end
